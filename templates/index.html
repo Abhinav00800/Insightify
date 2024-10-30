@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{{url_for('summarize')}}" method="POST">
+    
+    <textarea name="data" col="30" rows="10" placeholder="Typeed or Recorded data" required="required"> </textarea>
+    <div> <button type="submit"> summarize</button></div>
+    <input type="range" class="m-2" min="20" max="1000" name="maxL">
+    </form>
+
+    <h3>Summary</h3>
+    <div>
+        <textarea name="result" rows="10" cols="30" id="">{{result}}</textarea>
+    </div>
+</body>
+</html>
