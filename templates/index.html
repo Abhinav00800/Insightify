@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h3>Input text</h3>
     <form action="{{url_for('summarize')}}" method="POST">
     
     <textarea name="data" col="30" rows="10" placeholder="Typeed or Recorded data" required="required"> </textarea>
@@ -17,5 +18,13 @@
     <div>
         <textarea name="result" rows="10" cols="30" id="">{{result}}</textarea>
     </div>
+    <h3> Learning</h3>
+    <form action="{{url_for('question')}}" method="POST">
+        <div> <button type="submit">questions</button></div>
+    </form>
+    <div>
+        <textarea name="result" rows="10" cols="30" id="">{{ques}}</textarea>
+    </div>
+
 </body>
 </html>
