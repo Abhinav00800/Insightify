@@ -24,15 +24,7 @@ function Report() {
     const dateTime = data.datetime ? new Date(data.datetime) : null;
     const navigate = useNavigate();
 
-    const dummydata = `Data mining is the process of discovering patterns, trends, and insights from large datasets using techniques such as machine learning, statistical analysis, and artificial intelligence. It plays a crucial role in various industries, including finance, healthcare, marketing, and e-commerce, by enabling organizations to make data-driven decisions. 
-
-The process of data mining involves several key steps, including data collection, preprocessing, transformation, and pattern recognition. Large volumes of raw data are first gathered from various sources, such as databases, web pages, and IoT devices. This data is then cleaned and prepared to remove inconsistencies, missing values, and duplicates. Once the data is structured and organized, it undergoes transformation to extract meaningful attributes that contribute to analysis.
-
-One of the fundamental techniques used in data mining is classification, where algorithms categorize data into predefined groups based on historical patterns. Similarly, clustering methods help in grouping similar data points together without prior labeling. Association rule mining is another technique that identifies relationships between different variables, commonly used in market basket analysis to understand consumer purchasing behavior.
-
-Data mining also incorporates predictive modeling, which uses historical data to forecast future trends. In sectors like healthcare, predictive analytics helps in diagnosing diseases at an early stage, while in finance, it aids in detecting fraudulent transactions. Moreover, anomaly detection techniques are employed to identify unusual patterns that may indicate security breaches or operational inefficiencies.
-
-With the rise of big data and cloud computing, data mining has evolved significantly, making it easier to handle vast datasets with improved efficiency. Ethical considerations, such as data privacy and security, remain critical challenges in this field, requiring organizations to implement responsible data handling practices while leveraging data mining techniques for innovation and growth.`;
+    const dummydata = `Data mining is the process of discovering patterns, trends, and insights from large datasets using techniques such as machine learning, statistical analysis, and artificial intelligence. It plays a crucial role in various industries, including finance, healthcare, marketing, and e-commerce, by enabling organizations to make data-driven decisions. `
 
 
     const [summary, setSummary] = useState("");

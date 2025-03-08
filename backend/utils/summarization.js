@@ -3,12 +3,14 @@ const { OpenAI } = require("openai");
 const fs = require("fs");
 const axios = require("axios");
 const FormData = require("form-data");
+const dotenv =  require('dotenv');
+dotenv.config();
 
 const HF_API_KEY = process.env.HF_API_KEY;
-const GENAI_API_KEY = process.env.GENAI_API_KEY;
+// const GENAI_API_KEY = process.env.GENAI_API_KEY;
 const GENAI_MODEL = process.env.GENAI_MODEL;
 const Huggingface_API = process.env.HUGGINGFACE_API;
-const genAI = new GoogleGenerativeAI(GENAI_API_KEY);
+const genAI = new GoogleGenerativeAI(process.env.GENAI_API_KEY);
 const openapikey= process.env.OPENAI_API_KEY
 
 
@@ -75,7 +77,7 @@ const summarizeLecture = async (content) => {
   try {
     const response = await axios.post(
       Huggingface_API,
-      { inputs: content, parameters: { min_length: 200, max_length: 300 } },
+      { inputs: content, parameters: { min_length: 20, max_length: 300 } },
       { headers: { Authorization: `Bearer ${HF_API_KEY}` } }
     );
     return response.data[0]?.summary_text || "Summarization error.";
@@ -91,7 +93,7 @@ const generateQuestions = async (summary) => {
   try {
     const model = genAI.getGenerativeModel({ model: GENAI_MODEL });
 
-    const prompt = `Read the following text: ${summary} and generate 5-10 long type question-answer pairs. Use the format:
+    const prompt = `Read the following text: ${summary} and generate 5-10 one-word question-answer pairs. Use the format:
     
     1. Question: [Insert question]
        Answer: [Insert answer]`;
