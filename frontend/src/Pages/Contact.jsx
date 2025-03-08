@@ -22,7 +22,7 @@ const Contact = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch(`https://insightify-sigma.vercel.app/contact/send-email`, {
+      const response = await fetch(`${process.env.REACT_APP_URL}/contact/send-email`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

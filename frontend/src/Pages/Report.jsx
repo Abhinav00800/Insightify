@@ -39,7 +39,7 @@ function Report() {
         const fetchSummary = async () => {
             setLoadingSummary(true);
             try {
-                const response = await axios.post(`https://insightify-sigma.vercel.app/generate/summarize`, { text: dummydata });
+                const response = await axios.post(`${process.env.REACT_APP_URL}/generate/summarize`, { text: dummydata });
                 console.log("Summary Response:", response.data);
                 setSummary(response.data.summary);
             } catch (error) {
@@ -59,7 +59,7 @@ function Report() {
         const fetchQuestions = async () => {
             setLoadingQuestions(true);
             try {
-                const response = await axios.post(`https://insightify-sigma.vercel.app/generate/generate-questions`, { summary });
+                const response = await axios.post(`${process.env.REACT_APP_URL}/generate/generate-questions`, { summary });
                 console.log("Questions Response:", response.data);
                 setRelatedQuestions(response.data.questions);
             } catch (error) {
@@ -76,7 +76,7 @@ function Report() {
         setShowPopup(false);
         setLoadingUpload(true);
         try {
-            const response = await axios.post(`https://insightify-sigma.vercel.app/api/uploadlecture`, {
+            const response = await axios.post(`${process.env.REACT_APP_URL}/api/uploadlecture`, {
                 subject: data.sub,
                 teacher: data.tname,
                 content: dummydata,

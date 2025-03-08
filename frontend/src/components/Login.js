@@ -8,7 +8,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`https://insightify-sigma.vercel.app/api/login`, { username, password });
+      const response = await axios.post(`${process.env.REACT_APP_URL}/api/login`, { username, password });
       alert(response.data.message);
       // Redirect to dashboard or handle login success
     } catch (error) {

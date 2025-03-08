@@ -22,7 +22,7 @@ function Dashboard() {
   const fetchLectures = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`https://insightify-sigma.vercel.app/api/getlecture`);
+      const response = await axios.get(`${process.env.REACT_APP_URL}/api/getlecture`);
       const lecturesData = response.data.lectures;
       setLectures(lecturesData);
       setFilteredLectures(lecturesData);
@@ -104,9 +104,9 @@ function Dashboard() {
     setLoading(true);
     try {
       let url = "";
-      if (type === "Full Lecture") url = `https://insightify-sigma.vercel.app/api/getfulllecture/${lecture._id}`;
-      if (type === "Summary") url = `https://insightify-sigma.vercel.app/api/getsummarize/${lecture._id}`;
-      if (type === "Questions") url = `https://insightify-sigma.vercel.app/api/getquestions/${lecture._id}`;
+      if (type === "Full Lecture") url = `${process.env.REACT_APP_URL}/api/getfulllecture/${lecture._id}`;
+      if (type === "Summary") url = `${process.env.REACT_APP_URL}/api/getsummarize/${lecture._id}`;
+      if (type === "Questions") url = `${process.env.REACT_APP_URL}/api/getquestions/${lecture._id}`;
 
       const response = await axios.get(url);
       setDetails(response.data);
