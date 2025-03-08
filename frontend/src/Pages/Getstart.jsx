@@ -151,7 +151,7 @@ const Getstart = () => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_URL}/upload/audio`,
+        `https://insightify-sigma.vercel.app/upload/audio`,
         formDataToSend,
         {
           headers: {
@@ -162,7 +162,7 @@ const Getstart = () => {
 
       console.log("Upload successful:", response.data);
       const audioId = response.data.audio._id;
-      const audioURL = `${process.env.REACT_APP_URL}/upload/audio/${audioId}`;
+      const audioURL = `https://insightify-sigma.vercel.app/upload/audio/${audioId}`;
       console.log("Audio can be accessed at:", audioURL);
 
       setShowForm(false);
