@@ -80,24 +80,24 @@ const About = () => {
       pic: "/abhinav.jpg",
       email:"abhinavs.cs.22@nitj.ac.in",
     },
-    {
-      name: "Harman Paul",
-      branch: "BTech CSE'26",
-      linkedin: "https://www.linkedin.com/in/harman-paul-3b63ab144",
-      instagram: "https://www.instagram.com/harman_.paul/",
-      phone: "+91 6284733341",
-      pic: "/harman.jpg",
-      email:"harmanp.cs.22@nitj.ac.in",
-    },
-    {
-      name: "Yash Prajapati",
-      branch: "BTech CSE'26",
-      linkedin: "https://www.linkedin.com/in/yashp0212/",
-      instagram: "https://www.instagram.com/_yashp_212/",
-      phone: "+91 7983970792",
-      pic: "/yash.jpg",
-      email:"yashp.cs.22@nitj.ac.in",
-    },
+    // {
+    //   name: "Harman Paul",
+    //   branch: "BTech CSE'26",
+    //   linkedin: "https://www.linkedin.com/in/harman-paul-3b63ab144",
+    //   instagram: "https://www.instagram.com/harman_.paul/",
+    //   phone: "+91 6284733341",
+    //   pic: "/harman.jpg",
+    //   email:"harmanp.cs.22@nitj.ac.in",
+    // },
+    // {
+    //   name: "Yash Prajapati",
+    //   branch: "BTech CSE'26",
+    //   linkedin: "https://www.linkedin.com/in/yashp0212/",
+    //   instagram: "https://www.instagram.com/_yashp_212/",
+    //   phone: "+91 7983970792",
+    //   pic: "/yash.jpg",
+    //   email:"yashp.cs.22@nitj.ac.in",
+    // },
   ];
 
   return (
